@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+
+        <!-- Site Title -->
+        <title>Jobfy </title>
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo.png">
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/venobox.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/keyframe-animation.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+
+        <style>
+            /* Gaya popup */
+                .popup {
+                    display: none;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 20px;
+                    background-color: white;
+                    border: 1px solid #ccc;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    z-index: 1000;
+                    border-radius: 10px;
+                }
+            #token {
+                    cursor: pointer;
+                }
+                
+                
+        </style>
+
+<script>
+    function showPopup() {
+        // Menampilkan popup
+        document.getElementById("popup").style.display = "block";
+  
+        // Menyalin token ke clipboard
+        const tokenText = document.getElementById("token").innerText;
+        copyToClipboard(tokenText);
+    }
+  
+    function hidePopup() {
+        // Menyembunyikan popup
+        document.getElementById("popup").style.display = "none";
+    }
+  
+    function copyToClipboard(text) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+    }
+  </script>
+  
+
+    </head>
+
+    <body style="background-color: #2E50B3 ;">
+        <!-- header-area-start -->
+        <header class="header sticky-active">
+            <div class="header-container">
+                <div class="primary-header">
+                    <div class="primary-header-inner">
+                        <div class="header-logo d-lg-block">
+                            <a href="" style="padding-left:20px">
+                                <img src="assets/img/logo/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="header-menu-wrap">
+                            <div class="mobile-menu-items">
+                                <ul class="sub-menu">
+                                   
+                                        <li>
+                                            <a href="#">Home</a>
+                                        </li>  
+                                        
+                                         <li>
+                                            <a href="#about">About</a>
+                                        </li>  
+                                        
+                                         <li>
+                                            <a href="#tokenomics">Tokenomic</a>
+                                        </li>  
+                                        
+                                         <li>
+                                            <a href="#roadmap">Roadmap</a>
+                                        </li>  
+                                        
+                                        <li>
+                                            <a href="#support">Support</a>
+                                        </li>  
+                                        
+                                         
+                                        <li>
+                                            <a href="#explore">Explore</a>
+                                        </li>  
+                    
+                                
+                                </ul>
+                            </div>
+                            <div class="header-right">
+                                
+                                <div class="sidebar-icon">
+                                    <button class="sidebar-trigger open">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
+                                <div class="header-logo d-none d-lg-none">
+                                    <a href="">
+                                        <img src="assets/img/logo/logo.png" alt="Logo">
+                                    </a>
+                                </div>
+                                <div class="header-right-item">
+                                    <a href="javascript:void(0)" class="mobile-side-menu-toggle d-lg-none"
+                                        style="padding-right:20px"><i class="fa-sharp fa-solid fa-bars"></i
+                                    ></a>
+                                </div>
+                            </div>
+                            <!-- /.header-right -->
+                        </div>
+                        <!-- /.header-menu-wrap -->
+                    </div>
+                    <!-- /.primary-header-inner -->
+                </div>
+                <!-- /.primary-header -->
+            </div>
+        </header>
+        <!-- /.Main Header -->
+
+        <div id="popup-search-box">
+            <div class="box-inner-wrap d-flex align-items-center">
+                <form id="form" class="popup-search" action="#" method="get" role="search">
+                    <input id="popup-search" type="text" name="s" placeholder="Search here...">
+                    <button id="popup-search-button" type="submit" name="submit"></button>
+                </form>
+            </div>
+        </div>
+        <!-- /#popup-search-box -->
+
+        <div id="sidebar-area" class="sidebar-area">
+            <button class="sidebar-trigger close">
+                <svg
+                    class="sidebar-close"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="16px"
+                    height="12.7px"
+                    viewBox="0 0 16 12.7"
+                    style="enable-background: new 0 0 16 12.7"
+                    xml:space="preserve"
+                >
+                    <g>
+                        <rect
+                            x="0"
+                            y="5.4"
+                            transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)"
+                            width="16"
+                            height="2"
+                        ></rect>
+                        <rect
+                            x="0"
+                            y="5.4"
+                            transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)"
+                            width="16"
+                            height="2"
+                        ></rect>
+                    </g>
+                </svg>
+            </button>
+            <div class="side-menu-content">
+                <div class="side-menu-logo">
+                    <img src="assets/img/logo/logo.png" alt="logo">
+                </div>
+                <div class="side-menu-about">
+                  
+                    <a href="login/login17.html" class="mt-primary-btn">Sign In</a>
+                    
+                </div>
+                <ul class="side-menu-social">
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://t.me/JobfyOfficial">
+                                <img src="assets/img/logo/tel.png" alt="" style="width: 40px; margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://twitter.com/JobfyOfficial">
+                                <img src="assets/img/logo/twitter.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                            <!--   <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://www.tiktok.com/@jobfy.app">-->
+                            <!--    <img src="assets/img/logo/tiktok.png" alt="" style="width: 40px; margin-right: 10px;">-->
+                            <!--</a>-->
+                               <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://jobfy.site/">
+                                <img src="assets/img/logo/web.png" alt="" style="width: 40px; margin-right: 10px;">
+                            </a>
+                </ul>
+                
+                       <ul class="side-menu-social">
+                                    <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://www.dextools.io/app/en/ether/pair-explorer/0xe8a68c9439b470fb047A6b70f45D8C57e8610ac6">
+                                <img src="assets/img/logo/wp.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                             <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://document.jobfy.site/">
+                                <img src="assets/img/logo/wh.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://jobfy.medium.com/">
+                                <img src="assets/img/logo/medium.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://github.com/Jobfy">
+                                <img src="assets/img/logo/git.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                </ul>
+                                        
+            
+            </div>
+        </div>
+        <!--/.sidebar-area-->
+
+        <div class="mobile-side-menu">
+            <div class="side-menu-content">
+                <div class="side-menu-head">
+                    <a href=""><img src="assets/img/logo/logo.png" alt="logo"></a>
+                    <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
+                </div>
+                <div class="side-menu-wrap"></div>
+                     <div class="side-menu-about">
+                    <a href="login/login17.html" class="mt-primary-btn">Sign In</a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <!-- /.mobile-side-menu -->
+        <div class="mobile-side-menu-overlay"></div>
+
+        <div id="preloader">
+            <div class="preloader-close">x</div>
+            <div class="sk-three-bounce">
+                <div class="sk-child sk-bounce1"></div>
+                <div class="sk-child sk-bounce2"></div>
+                <div class="sk-child sk-bounce3"></div>
+            </div>
+        </div>
+
+        <section class="hero-section" data-background="assets/img/images/bg5.png">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content section-heading">
+                            <h4 class="sub-heading wow fade-in-bottom" data-wow-delay="300ms">Jobfy !</h4>
+                            <h1 class="section-title wow fade-in-bottom" data-wow-delay="400ms" style="color: white">Unlock Your Future in Crypto with Jobfy. Where Innovation <span>Meets Opportunity !</span></h1>
+                            <p class=" wow fade-in-bottom" data-wow-delay="500ms" style="color: white">
+                                Pioneering Decentralized Employment Solutions in Crypto and Blockchain. Revolutionize Your Career Path with Enhanced Transparency and Security. Embrace the Future of Work, Where Opportunity Meets Blockchain Innovation
+                            </p>
+                            <div class="hero-box wow fade-in-bottom" data-wow-delay="600ms">
+                                <img src="assets/img/images/coin.PNG" alt="hero">
+                                <ul>
+                                    <li style="color: white"><i class="fa-sharp fa-solid fa-circle-check"></i>Empowering Freelance Job Access</li>
+                                    <li style="color: white"><i class="fa-sharp fa-solid fa-circle-check"></i>Building a Trusted and Dynamic Job Ecosystem</li>
+                                </ul>
+                            </div>
+                            <div class="hero-btn-wrap wow fade-in-bottom" data-wow-delay="700ms">
+                              
+                                <a href="https://app.uniswap.org/swap?&chain=mainnet&use=v2&outputCurrency=0xe8a68c9439b470fb047A6b70f45D8C57e8610ac6" class="mt-primary-btn primary-2">Get Token Now</a>
+                         
+
+                                <div class="video-btn">
+                                    <a
+                                        class="video-popup"
+                                        data-autoplay="true"
+                                        data-vbtype="video"
+                                        href="assets/img/images/3.mp4"
+                                        <div class="play-btn">
+                                            <img src="assets/img/icon/hero-play.png" alt="play">
+                                            <div class="ripple-2"></div>
+                                        </div>
+                                       
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-shapes">
+                <img class="hero-shape shape-1" src="assets/img/shapes/hero-anim-1.png" alt="shapes">
+                <img class="hero-shape shape-2" src="assets/img/shapes/hero-anim-2.png" alt="shapes">
+                <img class="hero-shape shape-3" src="assets/img/shapes/hero-anim-3.png" alt="shapes">
+            </div>
+            <div class="hero-img-wrap">
+                <img src="assets/img/shapes/hero-img-shape.png" class="hero-shape" alt="shape">
+                <img src="assets/img/shapes/hero-circle.png" class="hero-circle" alt="circle">
+                <div class="hero-img-inner">
+                    <img src="assets/img/logo/tablet.PNG" alt="hero" style="width:80%">
+                </div>
+            </div>
+        </section>
+        <!-- ./ hero-section -->
+
+        <div class="sponsor-section pt-100 pb-100">
+            <div class="container">
+                <div class="sponsor-carousel swiper">
+                    <div class="swiper-wrapper swiper-container">
+                        <div class="swiper-slide">
+                            <div class="sponsor-item">
+                                <a href="#"><img src="assets/img/logo/bt.png" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item">
+                                <a href="#"><img src="assets/img/logo/bt1.png" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item">
+                                <a href="#"><img src="assets/img/logo/bt6.png" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item">
+                                <a href="#"><img src="assets/img/logo/bt4.png" alt="sponsor"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="sponsor-item">
+                                <a href="#"><img src="assets/img/logo/bt5.png" alt="sponsor"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./ sponsor-section -->
+
+        <section class="about-section pb-100" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-img wow slide-in-left" data-wow-delay="500ms">
+                            <img src="assets/img/images/hp4.PNG" alt="about">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-heading mb-30">
+                                <h4 class="sub-heading wow fade-in-right" data-wow-delay="300ms">About Us</h4>
+                                <h3 class="section-title wow fade-in-right" data-wow-delay="400ms" style="color: white">Introducing the Jobfy Crypto App</h3>
+                                <p class="wow fade-in-right" data-wow-delay="500ms" style="color: white">
+                                    Jobfy represents a groundbreaking decentralized third-party platform within the cryptocurrency and blockchain landscape, specifically crafted to facilitate seamless connections between job seekers and employers. Leveraging the transformative capabilities of blockchain technology, Jobfy introduces a new paradigm in the job market, characterized by enhanced transparency, security, and efficiency. 
+                                </p>
+                            </div>                                   
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./ about-section -->
+        
+        
+
+        <section class="counter-section pb-0">
+                    <div class="bg-color"></div>
+                    <div class="container">
+                        <div class="row gy-4">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="counter-item wow fade-in-bottom" data-wow-delay="300ms">
+                                    <div class="shape"><img src="assets/img/shapes/counter-shape.png" alt="shape"></div>
+                                    <div class="counter-icon"><img src="assets/img/icon/counter-1.png" alt="counter"></div>                        
+                                    <h4 class="title"><a href="">Benefits for Employers</a></h4>
+                                    <p>By using Jobfy, employers are assured that their staff are fully competent in the basics of using Web3 as part of their daily operation saving on, training.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="counter-item wow fade-in-bottom" data-wow-delay="400ms" style="--mt-color-theme-secondary: #f792ff">
+                                    <div class="shape"><img src="assets/img/shapes/counter-shape.png" alt="shape"></div>
+                                    <div class="counter-icon"><img src="assets/img/icon/counter-2.png" alt="counter"></div>
+                                    <h4 class="title"><a href="">Benefits for Job Seekers</a></h4>
+                                    <p>By applying through Jobfy, job seekers can clearly demonstrate that they are Web3 capable and worthy of clear and concise consideration by employers</p>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </section>
+
+        <!-- ./ counter-section -->
+
+        <section class="service-section bg-grey pt-100 pb-100" id="roadmap">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h4 class="sub-heading bg-white wow fade-in-bottom" data-wow-delay="400ms">Jobfy Roadmap</h4>
+                    <h2 class="section-title wow fade-in-bottom" data-wow-delay="500ms">Pioneering the Future of Decentralized Job Markets</h2>
+                </div>
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item text-center wow fade-in-bottom" data-wow-delay="400ms" style="--mt-color-theme-primary: #ffc330">
+                            <div class="shape">
+                                <svg
+                                    style="
+                                        shape-rendering: geometricPrecision;
+                                        text-rendering: geometricPrecision;
+                                        image-rendering: optimizeQuality;
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                >
+                                    <g>
+                                        <path
+                                            d="M 30.5,-0.5 C 35.8333,-0.5 41.1667,-0.5 46.5,-0.5C 46.5,4.5 46.5,9.5 46.5,14.5C 51.8333,14.5 57.1667,14.5 62.5,14.5C 62.5,19.8333 62.5,25.1667 62.5,30.5C 67.5,30.5 72.5,30.5 77.5,30.5C 77.5,35.8333 77.5,41.1667 77.5,46.5C 72.5,46.5 67.5,46.5 62.5,46.5C 62.5,51.8333 62.5,57.1667 62.5,62.5C 57.1667,62.5 51.8333,62.5 46.5,62.5C 46.5,67.5 46.5,72.5 46.5,77.5C 41.1667,77.5 35.8333,77.5 30.5,77.5C 30.5,72.5 30.5,67.5 30.5,62.5C 25.1667,62.5 19.8333,62.5 14.5,62.5C 14.5,57.1667 14.5,51.8333 14.5,46.5C 9.5,46.5 4.5,46.5 -0.5,46.5C -0.5,41.1667 -0.5,35.8333 -0.5,30.5C 4.5,30.5 9.5,30.5 14.5,30.5C 14.5,25.1667 14.5,19.8333 14.5,14.5C 19.8333,14.5 25.1667,14.5 30.5,14.5C 30.5,9.5 30.5,4.5 30.5,-0.5 Z M 33.5,1.5 C 36.8333,1.5 40.1667,1.5 43.5,1.5C 43.5,5.16667 43.5,8.83333 43.5,12.5C 40.1667,12.5 36.8333,12.5 33.5,12.5C 33.5,8.83333 33.5,5.16667 33.5,1.5 Z M 31.5,15.5 C 36.1667,15.5 40.8333,15.5 45.5,15.5C 45.5,20.5 45.5,25.5 45.5,30.5C 40.8333,30.5 36.1667,30.5 31.5,30.5C 31.5,25.5 31.5,20.5 31.5,15.5 Z M 17.5,17.5 C 21.1667,17.5 24.8333,17.5 28.5,17.5C 28.5,21.1667 28.5,24.8333 28.5,28.5C 24.8333,28.5 21.1667,28.5 17.5,28.5C 17.5,24.8333 17.5,21.1667 17.5,17.5 Z M 48.5,17.5 C 52.1667,17.5 55.8333,17.5 59.5,17.5C 59.5,21.1667 59.5,24.8333 59.5,28.5C 55.8333,28.5 52.1667,28.5 48.5,28.5C 48.5,24.8333 48.5,21.1667 48.5,17.5 Z M 15.5,31.5 C 20.5,31.5 25.5,31.5 30.5,31.5C 30.5,36.1667 30.5,40.8333 30.5,45.5C 25.5,45.5 20.5,45.5 15.5,45.5C 15.5,40.8333 15.5,36.1667 15.5,31.5 Z M 46.5,31.5 C 51.5,31.5 56.5,31.5 61.5,31.5C 61.5,36.1667 61.5,40.8333 61.5,45.5C 56.5,45.5 51.5,45.5 46.5,45.5C 46.5,40.8333 46.5,36.1667 46.5,31.5 Z M 1.5,33.5 C 5.16667,33.5 8.83333,33.5 12.5,33.5C 12.5,36.8333 12.5,40.1667 12.5,43.5C 8.83333,43.5 5.16667,43.5 1.5,43.5C 1.5,40.1667 1.5,36.8333 1.5,33.5 Z M 33.5,33.5 C 36.8333,33.5 40.1667,33.5 43.5,33.5C 43.5,36.8333 43.5,40.1667 43.5,43.5C 40.1667,43.5 36.8333,43.5 33.5,43.5C 33.5,40.1667 33.5,36.8333 33.5,33.5 Z M 64.5,33.5 C 68.1667,33.5 71.8333,33.5 75.5,33.5C 75.5,36.8333 75.5,40.1667 75.5,43.5C 71.8333,43.5 68.1667,43.5 64.5,43.5C 64.5,40.1667 64.5,36.8333 64.5,33.5 Z M 31.5,46.5 C 36.1667,46.5 40.8333,46.5 45.5,46.5C 45.5,51.5 45.5,56.5 45.5,61.5C 40.8333,61.5 36.1667,61.5 31.5,61.5C 31.5,56.5 31.5,51.5 31.5,46.5 Z M 17.5,48.5 C 21.1667,48.5 24.8333,48.5 28.5,48.5C 28.5,52.1667 28.5,55.8333 28.5,59.5C 24.8333,59.5 21.1667,59.5 17.5,59.5C 17.5,55.8333 17.5,52.1667 17.5,48.5 Z M 48.5,48.5 C 52.1667,48.5 55.8333,48.5 59.5,48.5C 59.5,52.1667 59.5,55.8333 59.5,59.5C 55.8333,59.5 52.1667,59.5 48.5,59.5C 48.5,55.8333 48.5,52.1667 48.5,48.5 Z M 33.5,64.5 C 36.8333,64.5 40.1667,64.5 43.5,64.5C 43.5,68.1667 43.5,71.8333 43.5,75.5C 40.1667,75.5 36.8333,75.5 33.5,75.5C 33.5,71.8333 33.5,68.1667 33.5,64.5 Z">
+                                       </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/logo/01.png" alt="service">
+                            </div>
+                            <h3 class="title"><a href="">Token Economy</a></h3>
+                            <p>
+                                Jobfy Launch <br/> Token Sale <br/> Tokenomics Implementation <br/> Jobfy Testnet
+                            </p>
+                            <a href="" class="read-more"
+                                >Read More<i class="fa-solid fa-circle-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item item-2 text-center wow fade-in-bottom" data-wow-delay="500ms">
+                            <div class="shape">
+                                <svg
+                                    style="
+                                        shape-rendering: geometricPrecision;
+                                        text-rendering: geometricPrecision;
+                                        image-rendering: optimizeQuality;
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                >
+                                    <g>
+                                        <path
+                                            d="M 30.5,-0.5 C 35.8333,-0.5 41.1667,-0.5 46.5,-0.5C 46.5,4.5 46.5,9.5 46.5,14.5C 51.8333,14.5 57.1667,14.5 62.5,14.5C 62.5,19.8333 62.5,25.1667 62.5,30.5C 67.5,30.5 72.5,30.5 77.5,30.5C 77.5,35.8333 77.5,41.1667 77.5,46.5C 72.5,46.5 67.5,46.5 62.5,46.5C 62.5,51.8333 62.5,57.1667 62.5,62.5C 57.1667,62.5 51.8333,62.5 46.5,62.5C 46.5,67.5 46.5,72.5 46.5,77.5C 41.1667,77.5 35.8333,77.5 30.5,77.5C 30.5,72.5 30.5,67.5 30.5,62.5C 25.1667,62.5 19.8333,62.5 14.5,62.5C 14.5,57.1667 14.5,51.8333 14.5,46.5C 9.5,46.5 4.5,46.5 -0.5,46.5C -0.5,41.1667 -0.5,35.8333 -0.5,30.5C 4.5,30.5 9.5,30.5 14.5,30.5C 14.5,25.1667 14.5,19.8333 14.5,14.5C 19.8333,14.5 25.1667,14.5 30.5,14.5C 30.5,9.5 30.5,4.5 30.5,-0.5 Z M 33.5,1.5 C 36.8333,1.5 40.1667,1.5 43.5,1.5C 43.5,5.16667 43.5,8.83333 43.5,12.5C 40.1667,12.5 36.8333,12.5 33.5,12.5C 33.5,8.83333 33.5,5.16667 33.5,1.5 Z M 31.5,15.5 C 36.1667,15.5 40.8333,15.5 45.5,15.5C 45.5,20.5 45.5,25.5 45.5,30.5C 40.8333,30.5 36.1667,30.5 31.5,30.5C 31.5,25.5 31.5,20.5 31.5,15.5 Z M 17.5,17.5 C 21.1667,17.5 24.8333,17.5 28.5,17.5C 28.5,21.1667 28.5,24.8333 28.5,28.5C 24.8333,28.5 21.1667,28.5 17.5,28.5C 17.5,24.8333 17.5,21.1667 17.5,17.5 Z M 48.5,17.5 C 52.1667,17.5 55.8333,17.5 59.5,17.5C 59.5,21.1667 59.5,24.8333 59.5,28.5C 55.8333,28.5 52.1667,28.5 48.5,28.5C 48.5,24.8333 48.5,21.1667 48.5,17.5 Z M 15.5,31.5 C 20.5,31.5 25.5,31.5 30.5,31.5C 30.5,36.1667 30.5,40.8333 30.5,45.5C 25.5,45.5 20.5,45.5 15.5,45.5C 15.5,40.8333 15.5,36.1667 15.5,31.5 Z M 46.5,31.5 C 51.5,31.5 56.5,31.5 61.5,31.5C 61.5,36.1667 61.5,40.8333 61.5,45.5C 56.5,45.5 51.5,45.5 46.5,45.5C 46.5,40.8333 46.5,36.1667 46.5,31.5 Z M 1.5,33.5 C 5.16667,33.5 8.83333,33.5 12.5,33.5C 12.5,36.8333 12.5,40.1667 12.5,43.5C 8.83333,43.5 5.16667,43.5 1.5,43.5C 1.5,40.1667 1.5,36.8333 1.5,33.5 Z M 33.5,33.5 C 36.8333,33.5 40.1667,33.5 43.5,33.5C 43.5,36.8333 43.5,40.1667 43.5,43.5C 40.1667,43.5 36.8333,43.5 33.5,43.5C 33.5,40.1667 33.5,36.8333 33.5,33.5 Z M 64.5,33.5 C 68.1667,33.5 71.8333,33.5 75.5,33.5C 75.5,36.8333 75.5,40.1667 75.5,43.5C 71.8333,43.5 68.1667,43.5 64.5,43.5C 64.5,40.1667 64.5,36.8333 64.5,33.5 Z M 31.5,46.5 C 36.1667,46.5 40.8333,46.5 45.5,46.5C 45.5,51.5 45.5,56.5 45.5,61.5C 40.8333,61.5 36.1667,61.5 31.5,61.5C 31.5,56.5 31.5,51.5 31.5,46.5 Z M 17.5,48.5 C 21.1667,48.5 24.8333,48.5 28.5,48.5C 28.5,52.1667 28.5,55.8333 28.5,59.5C 24.8333,59.5 21.1667,59.5 17.5,59.5C 17.5,55.8333 17.5,52.1667 17.5,48.5 Z M 48.5,48.5 C 52.1667,48.5 55.8333,48.5 59.5,48.5C 59.5,52.1667 59.5,55.8333 59.5,59.5C 55.8333,59.5 52.1667,59.5 48.5,59.5C 48.5,55.8333 48.5,52.1667 48.5,48.5 Z M 33.5,64.5 C 36.8333,64.5 40.1667,64.5 43.5,64.5C 43.5,68.1667 43.5,71.8333 43.5,75.5C 40.1667,75.5 36.8333,75.5 33.5,75.5C 33.5,71.8333 33.5,68.1667 33.5,64.5 Z">
+                                       </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/logo/02.png" alt="service">
+                            </div>
+                            <h3 class="title"><a href=""> Foundation</a></h3>
+                            <p>
+                                Jobfy Mainnet <br/> Jobfy Staking Platform <br/> Platform Inception <br/> Identity and Skill Verification <br/> Smart Contracts Deployment
+                            </p>
+                            <a href="" class="read-more"
+                                >Read More<i class="fa-solid fa-circle-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item text-center wow fade-in-bottom" data-wow-delay="400ms" style="--mt-color-theme-primary: #a6e155">
+                            <div class="shape">
+                                <svg
+                                    style="
+                                        shape-rendering: geometricPrecision;
+                                        text-rendering: geometricPrecision;
+                                        image-rendering: optimizeQuality;
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                >
+                                    <g>
+                                        <path
+                                            d="M 30.5,-0.5 C 35.8333,-0.5 41.1667,-0.5 46.5,-0.5C 46.5,4.5 46.5,9.5 46.5,14.5C 51.8333,14.5 57.1667,14.5 62.5,14.5C 62.5,19.8333 62.5,25.1667 62.5,30.5C 67.5,30.5 72.5,30.5 77.5,30.5C 77.5,35.8333 77.5,41.1667 77.5,46.5C 72.5,46.5 67.5,46.5 62.5,46.5C 62.5,51.8333 62.5,57.1667 62.5,62.5C 57.1667,62.5 51.8333,62.5 46.5,62.5C 46.5,67.5 46.5,72.5 46.5,77.5C 41.1667,77.5 35.8333,77.5 30.5,77.5C 30.5,72.5 30.5,67.5 30.5,62.5C 25.1667,62.5 19.8333,62.5 14.5,62.5C 14.5,57.1667 14.5,51.8333 14.5,46.5C 9.5,46.5 4.5,46.5 -0.5,46.5C -0.5,41.1667 -0.5,35.8333 -0.5,30.5C 4.5,30.5 9.5,30.5 14.5,30.5C 14.5,25.1667 14.5,19.8333 14.5,14.5C 19.8333,14.5 25.1667,14.5 30.5,14.5C 30.5,9.5 30.5,4.5 30.5,-0.5 Z M 33.5,1.5 C 36.8333,1.5 40.1667,1.5 43.5,1.5C 43.5,5.16667 43.5,8.83333 43.5,12.5C 40.1667,12.5 36.8333,12.5 33.5,12.5C 33.5,8.83333 33.5,5.16667 33.5,1.5 Z M 31.5,15.5 C 36.1667,15.5 40.8333,15.5 45.5,15.5C 45.5,20.5 45.5,25.5 45.5,30.5C 40.8333,30.5 36.1667,30.5 31.5,30.5C 31.5,25.5 31.5,20.5 31.5,15.5 Z M 17.5,17.5 C 21.1667,17.5 24.8333,17.5 28.5,17.5C 28.5,21.1667 28.5,24.8333 28.5,28.5C 24.8333,28.5 21.1667,28.5 17.5,28.5C 17.5,24.8333 17.5,21.1667 17.5,17.5 Z M 48.5,17.5 C 52.1667,17.5 55.8333,17.5 59.5,17.5C 59.5,21.1667 59.5,24.8333 59.5,28.5C 55.8333,28.5 52.1667,28.5 48.5,28.5C 48.5,24.8333 48.5,21.1667 48.5,17.5 Z M 15.5,31.5 C 20.5,31.5 25.5,31.5 30.5,31.5C 30.5,36.1667 30.5,40.8333 30.5,45.5C 25.5,45.5 20.5,45.5 15.5,45.5C 15.5,40.8333 15.5,36.1667 15.5,31.5 Z M 46.5,31.5 C 51.5,31.5 56.5,31.5 61.5,31.5C 61.5,36.1667 61.5,40.8333 61.5,45.5C 56.5,45.5 51.5,45.5 46.5,45.5C 46.5,40.8333 46.5,36.1667 46.5,31.5 Z M 1.5,33.5 C 5.16667,33.5 8.83333,33.5 12.5,33.5C 12.5,36.8333 12.5,40.1667 12.5,43.5C 8.83333,43.5 5.16667,43.5 1.5,43.5C 1.5,40.1667 1.5,36.8333 1.5,33.5 Z M 33.5,33.5 C 36.8333,33.5 40.1667,33.5 43.5,33.5C 43.5,36.8333 43.5,40.1667 43.5,43.5C 40.1667,43.5 36.8333,43.5 33.5,43.5C 33.5,40.1667 33.5,36.8333 33.5,33.5 Z M 64.5,33.5 C 68.1667,33.5 71.8333,33.5 75.5,33.5C 75.5,36.8333 75.5,40.1667 75.5,43.5C 71.8333,43.5 68.1667,43.5 64.5,43.5C 64.5,40.1667 64.5,36.8333 64.5,33.5 Z M 31.5,46.5 C 36.1667,46.5 40.8333,46.5 45.5,46.5C 45.5,51.5 45.5,56.5 45.5,61.5C 40.8333,61.5 36.1667,61.5 31.5,61.5C 31.5,56.5 31.5,51.5 31.5,46.5 Z M 17.5,48.5 C 21.1667,48.5 24.8333,48.5 28.5,48.5C 28.5,52.1667 28.5,55.8333 28.5,59.5C 24.8333,59.5 21.1667,59.5 17.5,59.5C 17.5,55.8333 17.5,52.1667 17.5,48.5 Z M 48.5,48.5 C 52.1667,48.5 55.8333,48.5 59.5,48.5C 59.5,52.1667 59.5,55.8333 59.5,59.5C 55.8333,59.5 52.1667,59.5 48.5,59.5C 48.5,55.8333 48.5,52.1667 48.5,48.5 Z M 33.5,64.5 C 36.8333,64.5 40.1667,64.5 43.5,64.5C 43.5,68.1667 43.5,71.8333 43.5,75.5C 40.1667,75.5 36.8333,75.5 33.5,75.5C 33.5,71.8333 33.5,68.1667 33.5,64.5 Z">
+                                       </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/logo/03.png" alt="service">
+                            </div>
+                            <h3 class="title"><a href="">Decentralized Job Listings</a></h3>
+                            <p>
+                                Advanced Matching Algorithms <br/> Community Engagement
+                            </p>
+                            <a href="" class="read-more"
+                                >Read More<i class="fa-solid fa-circle-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item text-center wow fade-in-bottom" data-wow-delay="500ms" style="--mt-color-theme-primary: #f792ff">
+                            <div class="shape">
+                                <svg
+                                    style="
+                                        shape-rendering: geometricPrecision;
+                                        text-rendering: geometricPrecision;
+                                        image-rendering: optimizeQuality;
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                >
+                                    <g>
+                                        <path
+                                            d="M 30.5,-0.5 C 35.8333,-0.5 41.1667,-0.5 46.5,-0.5C 46.5,4.5 46.5,9.5 46.5,14.5C 51.8333,14.5 57.1667,14.5 62.5,14.5C 62.5,19.8333 62.5,25.1667 62.5,30.5C 67.5,30.5 72.5,30.5 77.5,30.5C 77.5,35.8333 77.5,41.1667 77.5,46.5C 72.5,46.5 67.5,46.5 62.5,46.5C 62.5,51.8333 62.5,57.1667 62.5,62.5C 57.1667,62.5 51.8333,62.5 46.5,62.5C 46.5,67.5 46.5,72.5 46.5,77.5C 41.1667,77.5 35.8333,77.5 30.5,77.5C 30.5,72.5 30.5,67.5 30.5,62.5C 25.1667,62.5 19.8333,62.5 14.5,62.5C 14.5,57.1667 14.5,51.8333 14.5,46.5C 9.5,46.5 4.5,46.5 -0.5,46.5C -0.5,41.1667 -0.5,35.8333 -0.5,30.5C 4.5,30.5 9.5,30.5 14.5,30.5C 14.5,25.1667 14.5,19.8333 14.5,14.5C 19.8333,14.5 25.1667,14.5 30.5,14.5C 30.5,9.5 30.5,4.5 30.5,-0.5 Z M 33.5,1.5 C 36.8333,1.5 40.1667,1.5 43.5,1.5C 43.5,5.16667 43.5,8.83333 43.5,12.5C 40.1667,12.5 36.8333,12.5 33.5,12.5C 33.5,8.83333 33.5,5.16667 33.5,1.5 Z M 31.5,15.5 C 36.1667,15.5 40.8333,15.5 45.5,15.5C 45.5,20.5 45.5,25.5 45.5,30.5C 40.8333,30.5 36.1667,30.5 31.5,30.5C 31.5,25.5 31.5,20.5 31.5,15.5 Z M 17.5,17.5 C 21.1667,17.5 24.8333,17.5 28.5,17.5C 28.5,21.1667 28.5,24.8333 28.5,28.5C 24.8333,28.5 21.1667,28.5 17.5,28.5C 17.5,24.8333 17.5,21.1667 17.5,17.5 Z M 48.5,17.5 C 52.1667,17.5 55.8333,17.5 59.5,17.5C 59.5,21.1667 59.5,24.8333 59.5,28.5C 55.8333,28.5 52.1667,28.5 48.5,28.5C 48.5,24.8333 48.5,21.1667 48.5,17.5 Z M 15.5,31.5 C 20.5,31.5 25.5,31.5 30.5,31.5C 30.5,36.1667 30.5,40.8333 30.5,45.5C 25.5,45.5 20.5,45.5 15.5,45.5C 15.5,40.8333 15.5,36.1667 15.5,31.5 Z M 46.5,31.5 C 51.5,31.5 56.5,31.5 61.5,31.5C 61.5,36.1667 61.5,40.8333 61.5,45.5C 56.5,45.5 51.5,45.5 46.5,45.5C 46.5,40.8333 46.5,36.1667 46.5,31.5 Z M 1.5,33.5 C 5.16667,33.5 8.83333,33.5 12.5,33.5C 12.5,36.8333 12.5,40.1667 12.5,43.5C 8.83333,43.5 5.16667,43.5 1.5,43.5C 1.5,40.1667 1.5,36.8333 1.5,33.5 Z M 33.5,33.5 C 36.8333,33.5 40.1667,33.5 43.5,33.5C 43.5,36.8333 43.5,40.1667 43.5,43.5C 40.1667,43.5 36.8333,43.5 33.5,43.5C 33.5,40.1667 33.5,36.8333 33.5,33.5 Z M 64.5,33.5 C 68.1667,33.5 71.8333,33.5 75.5,33.5C 75.5,36.8333 75.5,40.1667 75.5,43.5C 71.8333,43.5 68.1667,43.5 64.5,43.5C 64.5,40.1667 64.5,36.8333 64.5,33.5 Z M 31.5,46.5 C 36.1667,46.5 40.8333,46.5 45.5,46.5C 45.5,51.5 45.5,56.5 45.5,61.5C 40.8333,61.5 36.1667,61.5 31.5,61.5C 31.5,56.5 31.5,51.5 31.5,46.5 Z M 17.5,48.5 C 21.1667,48.5 24.8333,48.5 28.5,48.5C 28.5,52.1667 28.5,55.8333 28.5,59.5C 24.8333,59.5 21.1667,59.5 17.5,59.5C 17.5,55.8333 17.5,52.1667 17.5,48.5 Z M 48.5,48.5 C 52.1667,48.5 55.8333,48.5 59.5,48.5C 59.5,52.1667 59.5,55.8333 59.5,59.5C 55.8333,59.5 52.1667,59.5 48.5,59.5C 48.5,55.8333 48.5,52.1667 48.5,48.5 Z M 33.5,64.5 C 36.8333,64.5 40.1667,64.5 43.5,64.5C 43.5,68.1667 43.5,71.8333 43.5,75.5C 40.1667,75.5 36.8333,75.5 33.5,75.5C 33.5,71.8333 33.5,68.1667 33.5,64.5 Z">
+                                       </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/logo/04.png" alt="service">
+                            </div>
+                            <h3 class="title"><a href=""></a> Growth and Adoption </h3>
+                            <p>
+                                Marketing and Outreach <br/> Global Partnerships <br/> Enhanced User Experience
+                            </p>
+                            <a href="" class="read-more"
+                                >Read More<i class="fa-solid fa-circle-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item text-center wow fade-in-bottom" data-wow-delay="500ms" style="--mt-color-theme-primary: #f792ff">
+                            <div class="shape">
+                                <svg
+                                    style="
+                                        shape-rendering: geometricPrecision;
+                                        text-rendering: geometricPrecision;
+                                        image-rendering: optimizeQuality;
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                >
+                                    <g>
+                                        <path
+                                            d="M 30.5,-0.5 C 35.8333,-0.5 41.1667,-0.5 46.5,-0.5C 46.5,4.5 46.5,9.5 46.5,14.5C 51.8333,14.5 57.1667,14.5 62.5,14.5C 62.5,19.8333 62.5,25.1667 62.5,30.5C 67.5,30.5 72.5,30.5 77.5,30.5C 77.5,35.8333 77.5,41.1667 77.5,46.5C 72.5,46.5 67.5,46.5 62.5,46.5C 62.5,51.8333 62.5,57.1667 62.5,62.5C 57.1667,62.5 51.8333,62.5 46.5,62.5C 46.5,67.5 46.5,72.5 46.5,77.5C 41.1667,77.5 35.8333,77.5 30.5,77.5C 30.5,72.5 30.5,67.5 30.5,62.5C 25.1667,62.5 19.8333,62.5 14.5,62.5C 14.5,57.1667 14.5,51.8333 14.5,46.5C 9.5,46.5 4.5,46.5 -0.5,46.5C -0.5,41.1667 -0.5,35.8333 -0.5,30.5C 4.5,30.5 9.5,30.5 14.5,30.5C 14.5,25.1667 14.5,19.8333 14.5,14.5C 19.8333,14.5 25.1667,14.5 30.5,14.5C 30.5,9.5 30.5,4.5 30.5,-0.5 Z M 33.5,1.5 C 36.8333,1.5 40.1667,1.5 43.5,1.5C 43.5,5.16667 43.5,8.83333 43.5,12.5C 40.1667,12.5 36.8333,12.5 33.5,12.5C 33.5,8.83333 33.5,5.16667 33.5,1.5 Z M 31.5,15.5 C 36.1667,15.5 40.8333,15.5 45.5,15.5C 45.5,20.5 45.5,25.5 45.5,30.5C 40.8333,30.5 36.1667,30.5 31.5,30.5C 31.5,25.5 31.5,20.5 31.5,15.5 Z M 17.5,17.5 C 21.1667,17.5 24.8333,17.5 28.5,17.5C 28.5,21.1667 28.5,24.8333 28.5,28.5C 24.8333,28.5 21.1667,28.5 17.5,28.5C 17.5,24.8333 17.5,21.1667 17.5,17.5 Z M 48.5,17.5 C 52.1667,17.5 55.8333,17.5 59.5,17.5C 59.5,21.1667 59.5,24.8333 59.5,28.5C 55.8333,28.5 52.1667,28.5 48.5,28.5C 48.5,24.8333 48.5,21.1667 48.5,17.5 Z M 15.5,31.5 C 20.5,31.5 25.5,31.5 30.5,31.5C 30.5,36.1667 30.5,40.8333 30.5,45.5C 25.5,45.5 20.5,45.5 15.5,45.5C 15.5,40.8333 15.5,36.1667 15.5,31.5 Z M 46.5,31.5 C 51.5,31.5 56.5,31.5 61.5,31.5C 61.5,36.1667 61.5,40.8333 61.5,45.5C 56.5,45.5 51.5,45.5 46.5,45.5C 46.5,40.8333 46.5,36.1667 46.5,31.5 Z M 1.5,33.5 C 5.16667,33.5 8.83333,33.5 12.5,33.5C 12.5,36.8333 12.5,40.1667 12.5,43.5C 8.83333,43.5 5.16667,43.5 1.5,43.5C 1.5,40.1667 1.5,36.8333 1.5,33.5 Z M 33.5,33.5 C 36.8333,33.5 40.1667,33.5 43.5,33.5C 43.5,36.8333 43.5,40.1667 43.5,43.5C 40.1667,43.5 36.8333,43.5 33.5,43.5C 33.5,40.1667 33.5,36.8333 33.5,33.5 Z M 64.5,33.5 C 68.1667,33.5 71.8333,33.5 75.5,33.5C 75.5,36.8333 75.5,40.1667 75.5,43.5C 71.8333,43.5 68.1667,43.5 64.5,43.5C 64.5,40.1667 64.5,36.8333 64.5,33.5 Z M 31.5,46.5 C 36.1667,46.5 40.8333,46.5 45.5,46.5C 45.5,51.5 45.5,56.5 45.5,61.5C 40.8333,61.5 36.1667,61.5 31.5,61.5C 31.5,56.5 31.5,51.5 31.5,46.5 Z M 17.5,48.5 C 21.1667,48.5 24.8333,48.5 28.5,48.5C 28.5,52.1667 28.5,55.8333 28.5,59.5C 24.8333,59.5 21.1667,59.5 17.5,59.5C 17.5,55.8333 17.5,52.1667 17.5,48.5 Z M 48.5,48.5 C 52.1667,48.5 55.8333,48.5 59.5,48.5C 59.5,52.1667 59.5,55.8333 59.5,59.5C 55.8333,59.5 52.1667,59.5 48.5,59.5C 48.5,55.8333 48.5,52.1667 48.5,48.5 Z M 33.5,64.5 C 36.8333,64.5 40.1667,64.5 43.5,64.5C 43.5,68.1667 43.5,71.8333 43.5,75.5C 40.1667,75.5 36.8333,75.5 33.5,75.5C 33.5,71.8333 33.5,68.1667 33.5,64.5 Z">
+                                       </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/logo/05.png" alt="service">
+                            </div>
+                            <h3 class="title"><a href=""></a> Decentralized Governance </h3>
+                            <p>
+                                Governance Mechanisms <br/> Deflationary Measures
+                            </p>
+                            <a href="" class="read-more"
+                                >Read More<i class="fa-solid fa-circle-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-item text-center wow fade-in-bottom" data-wow-delay="500ms" style="--mt-color-theme-primary: #f792ff">
+                            <div class="shape">
+                                <svg
+                                    style="
+                                        shape-rendering: geometricPrecision;
+                                        text-rendering: geometricPrecision;
+                                        image-rendering: optimizeQuality;
+                                        fill-rule: evenodd;
+                                        clip-rule: evenodd;
+                                    "
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                >
+                                    <g>
+                                        <path
+                                            d="M 30.5,-0.5 C 35.8333,-0.5 41.1667,-0.5 46.5,-0.5C 46.5,4.5 46.5,9.5 46.5,14.5C 51.8333,14.5 57.1667,14.5 62.5,14.5C 62.5,19.8333 62.5,25.1667 62.5,30.5C 67.5,30.5 72.5,30.5 77.5,30.5C 77.5,35.8333 77.5,41.1667 77.5,46.5C 72.5,46.5 67.5,46.5 62.5,46.5C 62.5,51.8333 62.5,57.1667 62.5,62.5C 57.1667,62.5 51.8333,62.5 46.5,62.5C 46.5,67.5 46.5,72.5 46.5,77.5C 41.1667,77.5 35.8333,77.5 30.5,77.5C 30.5,72.5 30.5,67.5 30.5,62.5C 25.1667,62.5 19.8333,62.5 14.5,62.5C 14.5,57.1667 14.5,51.8333 14.5,46.5C 9.5,46.5 4.5,46.5 -0.5,46.5C -0.5,41.1667 -0.5,35.8333 -0.5,30.5C 4.5,30.5 9.5,30.5 14.5,30.5C 14.5,25.1667 14.5,19.8333 14.5,14.5C 19.8333,14.5 25.1667,14.5 30.5,14.5C 30.5,9.5 30.5,4.5 30.5,-0.5 Z M 33.5,1.5 C 36.8333,1.5 40.1667,1.5 43.5,1.5C 43.5,5.16667 43.5,8.83333 43.5,12.5C 40.1667,12.5 36.8333,12.5 33.5,12.5C 33.5,8.83333 33.5,5.16667 33.5,1.5 Z M 31.5,15.5 C 36.1667,15.5 40.8333,15.5 45.5,15.5C 45.5,20.5 45.5,25.5 45.5,30.5C 40.8333,30.5 36.1667,30.5 31.5,30.5C 31.5,25.5 31.5,20.5 31.5,15.5 Z M 17.5,17.5 C 21.1667,17.5 24.8333,17.5 28.5,17.5C 28.5,21.1667 28.5,24.8333 28.5,28.5C 24.8333,28.5 21.1667,28.5 17.5,28.5C 17.5,24.8333 17.5,21.1667 17.5,17.5 Z M 48.5,17.5 C 52.1667,17.5 55.8333,17.5 59.5,17.5C 59.5,21.1667 59.5,24.8333 59.5,28.5C 55.8333,28.5 52.1667,28.5 48.5,28.5C 48.5,24.8333 48.5,21.1667 48.5,17.5 Z M 15.5,31.5 C 20.5,31.5 25.5,31.5 30.5,31.5C 30.5,36.1667 30.5,40.8333 30.5,45.5C 25.5,45.5 20.5,45.5 15.5,45.5C 15.5,40.8333 15.5,36.1667 15.5,31.5 Z M 46.5,31.5 C 51.5,31.5 56.5,31.5 61.5,31.5C 61.5,36.1667 61.5,40.8333 61.5,45.5C 56.5,45.5 51.5,45.5 46.5,45.5C 46.5,40.8333 46.5,36.1667 46.5,31.5 Z M 1.5,33.5 C 5.16667,33.5 8.83333,33.5 12.5,33.5C 12.5,36.8333 12.5,40.1667 12.5,43.5C 8.83333,43.5 5.16667,43.5 1.5,43.5C 1.5,40.1667 1.5,36.8333 1.5,33.5 Z M 33.5,33.5 C 36.8333,33.5 40.1667,33.5 43.5,33.5C 43.5,36.8333 43.5,40.1667 43.5,43.5C 40.1667,43.5 36.8333,43.5 33.5,43.5C 33.5,40.1667 33.5,36.8333 33.5,33.5 Z M 64.5,33.5 C 68.1667,33.5 71.8333,33.5 75.5,33.5C 75.5,36.8333 75.5,40.1667 75.5,43.5C 71.8333,43.5 68.1667,43.5 64.5,43.5C 64.5,40.1667 64.5,36.8333 64.5,33.5 Z M 31.5,46.5 C 36.1667,46.5 40.8333,46.5 45.5,46.5C 45.5,51.5 45.5,56.5 45.5,61.5C 40.8333,61.5 36.1667,61.5 31.5,61.5C 31.5,56.5 31.5,51.5 31.5,46.5 Z M 17.5,48.5 C 21.1667,48.5 24.8333,48.5 28.5,48.5C 28.5,52.1667 28.5,55.8333 28.5,59.5C 24.8333,59.5 21.1667,59.5 17.5,59.5C 17.5,55.8333 17.5,52.1667 17.5,48.5 Z M 48.5,48.5 C 52.1667,48.5 55.8333,48.5 59.5,48.5C 59.5,52.1667 59.5,55.8333 59.5,59.5C 55.8333,59.5 52.1667,59.5 48.5,59.5C 48.5,55.8333 48.5,52.1667 48.5,48.5 Z M 33.5,64.5 C 36.8333,64.5 40.1667,64.5 43.5,64.5C 43.5,68.1667 43.5,71.8333 43.5,75.5C 40.1667,75.5 36.8333,75.5 33.5,75.5C 33.5,71.8333 33.5,68.1667 33.5,64.5 Z">
+                                       </path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="service-icon">
+                                <img src="assets/img/logo/06.png" alt="service">
+                            </div>
+                            <h3 class="title"><a href=""></a> Future Innovations </h3>
+                            <p>
+                                Integration of Emerging Technologies <br/> Global Expansion
+                            </p>
+                            <a href="" class="read-more"
+                                >Read More<i class="fa-solid fa-circle-chevron-right"></i
+                            ></a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+        <!-- ./ service-section -->
+        
+        <section class="content-section bg-dark-1" id="explore">
+            <div class="container">
+                    <div class="section-heading text-center" style="padding-top: 40px;">
+                    <h4 class="sub-heading bg-white wow fade-in-bottom" data-wow-delay="400ms">Explore</h4>
+                    <h2 class="section-title wow fade-in-bottom" data-wow-delay="500ms"  style="color: white">Explore Jobfy Universe</h2>
+                </div>
+                <div class="row team-service-wrap wrap-2 gy-lg-0 gy-4">
+                    <div class="col-md-6" style="padding-top: 20px;">
+                        <div class="team-service wow fade-in-bottom" data-wow-delay="600ms">
+                            <div class="icon-box">
+                                <img src="assets/img/icon/team-service-2.png" alt="icon">
+                            </div>
+                            <div class="team-service-content">
+                                <h3 class="title">Jobfy Mainnet
+                                </h3>
+                                <p style="padding-bottom:10px">Jobfy's mainnet is positioned as a robust Ethereum scaling solution for Layer 2, focusing on enhancing scalability and speeding up transaction execution.</p>
+                                <a href="https://scan.jobfy.site/" class="mt-primary-btn primary-2">Mainnet Jobfy</a>
+                                <a href="https://status.jobfy.site/" class="mt-primary-btn primary-2">Status Jobfy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 20px;">
+                        <div class="team-service wow fade-in-bottom" data-wow-delay="600ms">
+                            <div class="icon-box">
+                                <img src="assets/img/icon/team-service-2.png" alt="icon">
+                            </div>
+                            <div class="team-service-content">
+                                <h3 class="title">STAKING PLATFORM
+                                </h3>
+                                <p style="padding-bottom:10px">Earn rewards according to
+                                    percentage of the tokens staked by staking your cryptocurrency through the Jobfy Staking
+                                    Platform, monitoring your rewards, finding opportunities.
+                                </p>
+                                <a href="https://stake.jobfy.site/" class="mt-primary-btn primary-2">Staking Jobfy</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-top: 20px;">
+                        <div class="team-service wow fade-in-bottom" data-wow-delay="600ms">
+                            <div class="icon-box">
+                                <img src="assets/img/icon/team-service-2.png" alt="icon">
+                            </div>
+                            <div class="team-service-content">
+                                <h3 class="title">Decentralized Job Listings
+                                </h3>
+                                <p>Integration of advanced algorithms to efficiently match job seekers with relevant opportunities and community engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    
+                    <div class="col-md-6" style="padding-top: 20px;">
+                        <div class="team-service wow fade-in-bottom" data-wow-delay="600ms">
+                            <div class="icon-box">
+                                <img src="assets/img/icon/team-service-2.png" alt="icon">
+                            </div>
+                            <div class="team-service-content">
+                                <h3 class="title">LAUNCHPAD
+                                </h3>
+                                <p>Jobfypad is a platform that offers projects a streamlined process to raise fund through token sales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="padding-top: 20px;">
+                        <div class="team-service wow fade-in-bottom" data-wow-delay="600ms">
+                            <div class="icon-box">
+                                <img src="assets/img/icon/team-service-2.png" alt="icon">
+                            </div>
+                            <div class="team-service-content">
+                                <h3 class="title">TESTNET
+                                </h3>
+                                     <p>Check this out!<br/></p>
+                                <a  href="https://explorer.jobfy.site/" class="mt-primary-btn primary-2">Tesnet Jobfy</a>
+                                 <a  href="https://faucet.jobfy.site/" class="mt-primary-btn primary-2">Claim Jobfy Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section" id="tokenomics">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="skill-content pt-100 pb-100">
+                            <div class="section-heading">
+                               
+                                <h2 class="section-title wow fade-in-bottom" data-wow-delay="400ms" style="color: white">Tokenomics</h2>
+                                <p class="wow fade-in-bottom" data-wow-delay="500ms" style="color: white">
+                                  Jobfy's tokenomics are designed to create a vibrant and sustainable ecosystem where users are not only participants but active contributors to the growth and success of the decentralized job marketplace within the cryptocurrency and blockchain industry.
+                                  
+                                </p>
+                            </div>
+                             <img src="assets/img/images/t.png" alt="service">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="man" data-background="assets/img/images/laptop.PNG"></div>
+        </section>
+        <!-- ./ skill-section -->
+        
+        
+        <section class="cta-section" style="padding-top: 50px">
+            <div class="cta-wrap" data-background="assets/img/images/cn.png">
+                <div class="overlay"></div>
+             
+                <div class="cta-content wow fade-in-bottom" data-wow-delay="300ms">
+                    <a
+                        class="video-popup video-btn"
+                        data-autoplay="true"
+                        data-vbtype="video"
+                        href="assets/img/images/2.mp4"
+                        ><i class="fa-light fa-circle-play"></i>
+                        <div class="ripple"></div>
+                    </a>
+                    <h3 class="title wow fade-in-bottom" data-wow-delay="400ms">More About Jobfy</h3>
+             
+                    <a href="" class="mt-primary-btn primary-2 wow fade-in-bottom" data-wow-delay="600ms">Video More</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ./ cta-section -->
+
+        
+        <!-- ./ project-section -->
+
+        
+        <!-- ./ testimonial-section -->
+
+        <section class="about-section-2 pt-100 pb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-info">
+                            <div class="section-heading">
+                                <h4 class="sub-heading wow fade-in-left" data-wow-delay="300ms">Our Choose Us</h4>
+                                <h2 class="section-title wow fade-in-left" data-wow-delay="400ms" style="color: white">Building a Trustworthy and Dynamic Work Environment.</h2>
+                                <p class="wow fade-in-left" data-wow-delay="500ms" style="color: white">
+                                    This platform innovatively addresses the challenges associated with conventional job markets, fostering a trustful and dynamic environment.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-items">
+                            <div class="about-item wow fade-in-left" data-wow-delay="600ms">
+                                <div class="about-icon">
+                                    <img src="assets/img/icon/about-1.png" alt="icon">
+                                </div>
+                                <div class="about-item-content">
+                                    <h3 class="title" style="color: white">FEATURED JOBS<span></span></h3>
+                                    <p style="color: white">Check out our available Featured Jobs</p>
+                                </div>
+                            </div>
+                            <div class="about-item wow fade-in-left" data-wow-delay="700ms" style="--mt-color-theme-secondary: #175cff">
+                                <div class="top-shape">
+                                    <img src="assets/img/shapes/arrow-bottom.png" alt="arrow">
+                                </div>
+                                <div class="top-shape shape-2">
+                                    <img src="assets/img/shapes/arrow-top.png" alt="arrow">
+                                </div>
+                                <div class="about-icon">
+                                    <img src="assets/img/icon/about-2.png" alt="icon">
+                                </div>
+                                <div class="about-item-content">
+                                    <h3 class="title" style="color: white">LATEST JOBS<span></span></h3>
+                                    <p style="color: white">Check out our available Latest Jobs</p>
+                                </div>
+                            </div>
+                            <div class="about-item wow fade-in-left" data-wow-delay="800ms" style="--mt-color-theme-secondary: #ff8c91">
+                                <div class="about-icon">
+                                    <img src="assets/img/icon/about-3.png" alt="icon">
+                                </div>
+                                <div class="about-item-content">
+                                    <h3 class="title" style="color: white">POPULAR JOBS<span></span></h3>
+                                    <p style="color: white">Check out our most Popular Jobs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-img-wrap">
+                            <img src="assets/img/images/cin.png" alt="about">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./ about-section-2 -->
+
+        <section class="testimonial-section pt-100 pb-100">
+            <div class="overlay"></div>
+            <div class="testi-shape"></div>
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h4 class="sub-heading wow fade-in-bottom" data-wow-delay="400ms">Influencer</h4>
+                    <h2 class="section-title wow fade-in-bottom" data-wow-delay="500ms">What Our Influencer Say</h2>
+                  
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6">
+                        <div class="testi-carousel-wrap">
+                            <div class="quote-3"><img src="assets/img/icon/quote-3.png" alt="quote"></div>
+                            <div class="testi-thumb-wrap">
+                                <div class="swiper thumb-carousel">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="testi-thumb">
+                                                <img src="assets/img/logo/pr.png" alt="post">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testi-thumb">
+                                                <img src="assets/img/logo/pr3.png" alt="post">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testi-thumb">
+                                                <img src="assets/img/logo/pr2.png" alt="post">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testi-thumb">
+                                                <img src="assets/img/logo/pr4.png" alt="post">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testi-thumb">
+                                                <img src="assets/img/logo/pr5.png" alt="post">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper content-carousel">
+                                <div class="swiper-wrapper">
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="testi-content">
+                                            <img src="assets/img/logo/lp.png" alt="post">
+
+
+                                        </div>
+                                             <div class="testi-content" style="padding-top:20px" >
+                                            <a href="https://twitter.com/degenape22/status/1757324274610901344?s=46&t=i6DMUhLVx06ii6N24_8-c" class="mt-primary-btn primary-2 wow fade-in-bottom" data-wow-delay="600ms">More</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testi-content">
+                                            <img src="assets/img/logo/tw2.png" alt="post">
+                                  
+                                        </div>
+                                             <div class="testi-content" style="padding-top:20px" >
+                                            <a href="https://t.me/casinocall/3327" class="mt-primary-btn primary-2 wow fade-in-bottom" data-wow-delay="600ms">More</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testi-content">
+                                            <img src="assets/img/logo/tw3.png" alt="post">
+
+                                 
+                                        </div>
+                                             <div class="testi-content" style="padding-top:20px" >
+                                            <a href="https://twitter.com/HawkOfCrypto/status/1757355546997604816?s=20" class="mt-primary-btn primary-2 wow fade-in-bottom" data-wow-delay="600ms">More</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testi-content">
+                                            <img src="assets/img/logo/tw4.png" alt="post">
+
+                                 
+                                        </div>
+                                             <div class="testi-content" style="padding-top:20px" >
+                                            <a href="https://x.com/ynzokk/status/1736860801711882716?s=20" class="mt-primary-btn primary-2 wow fade-in-bottom" data-wow-delay="600ms">More</a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testi-content">
+                                            <img src="assets/img/logo/tw5.png" alt="post">
+
+                                 
+                                        </div>
+                                             <div class="testi-content" style="padding-top:20px" >
+                                            <a href="https://t.me/snowdencalls/3414" class="mt-primary-btn primary-2 wow fade-in-bottom" data-wow-delay="600ms">More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="blog-section pt-100 pb-100">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <h4 class="sub-heading wow fade-in-bottom" data-wow-delay="400ms">Our News & Blogs</h4>
+                    <h2 class="section-title wow fade-in-bottom" data-wow-delay="600ms" style="color: white"> Job vacancy</h2>
+                </div>
+                <div class="blog-carousel-wrap">
+                    <div class="blog-carousel swiper">
+                        <div class="swiper-wrapper swiper-container">
+                            
+                            <div class="swiper-slide">
+                                <div class="post-card">
+                                    <div class="post-thumb">
+                                        <img src="assets/img/logo/logo1.png" alt="post">
+                                      
+                                    </div>
+                                    <div class="post-content-wrap">
+                                        <div class="post-content">
+                                           
+                                            <h3 class="title" style="color: white">
+                                                <a href="blog-details.html"
+                                                    >Comingsoon</a
+                                                >
+                                            </h3>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="post-card">
+                                    <div class="post-thumb">
+                                        <img src="assets/img/images/web.jpg" alt="post">
+                                       
+                                    </div>
+                                    <div class="post-content-wrap">
+                                        <div class="post-content">
+                                            
+                                            <h3 class="title" style="color: white">
+                                                <a href=""
+                                                    >Web Developer</a
+                                                >
+                                            </h3>
+                                            <p class="desc" style="color: white">
+                                               Are you passionate about crafting immersive online experiences? Join our team as a Web Developer and be a part of creating cutting-edge digital solutions that leave a lasting impact!
+                                            </p>
+                                        </div>
+                                        <div class="post-review-wrap">
+                                            <ul class="review">
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><i class="fas fa-star"></i></li>
+                                                <li><span>(05)</span></li>
+                                            </ul>
+                                            <a href=""
+                                                style="color: white">Read More <i class="fa-solid fa-circle-chevron-right"></i
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="post-card">
+                                    <div class="post-thumb">
+                                        <img src="assets/img/logo/logo1.png" alt="post">
+                                   
+                                    </div>
+                                    <div class="post-content-wrap">
+                                        <div class="post-content">
+                                           
+                                            <h3 class="title" style="color: white">
+                                                <a href=""
+                                                    >Comingsoon</a
+                                                >
+                                            </h3>
+                                          
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Carousel Dots -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+
+        <footer class="footer-section" data-background="assets/img/images/coin.jpg">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">
+                        <a href=""><img src="assets/img/logo/coin2.PNG" alt="logo"></a>
+                    </div>
+                    <div class="footer-form-wrap">
+                        <h3 class="news">Ready to Start? <span>Get the latest jobs direct to your inbox</span></h3>
+                        <div class="footer-form">
+                            <form action="#" class="mt-subscribe-form">
+                                <input
+                                    class="form-control"
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter Your Email"
+                                    required="">
+                                <input type="hidden" name="action" value="mailchimpsubscribe">
+                                <button class="submit">Join Alert List</button>
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                    </div>                  
+                </div>
+                
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-content">
+                        <p>Copyright © 2024 <span>Jobfy</span>, All Rights Reserved.</p>
+                        <ul class="side-menu-social" style="padding-bottom : 70px">
+                            
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://t.me/JobfyOfficial">
+                                <img src="assets/img/logo/tel.png" alt="" style="width: 40px; margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://twitter.com/JobfyOfficial">
+                                <img src="assets/img/logo/twitter.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                               <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://www.tiktok.com/@jobfy.app">
+                                <img src="assets/img/logo/tiktok.png" alt="" style="width: 40px; margin-right: 10px;">
+                            </a>
+                               <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://jobfy.site/">
+                                <img src="assets/img/logo/web.png" alt="" style="width: 40px; margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://www.dextools.io/app/en/ether/pair-explorer/0xe8a68c9439b470fb047A6b70f45D8C57e8610ac6">
+                                <img src="assets/img/logo/wp.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                             <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://document.jobfy.site/">
+                                <img src="assets/img/logo/wh.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://jobfy.medium.com/">
+                                <img src="assets/img/logo/medium.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                            <a class="inline-flex h-8 w-8 items-center justify-center rounded-full text-white transition-transform hover:scale-110" href="https://github.com/Jobfy">
+                                <img src="assets/img/logo/git.png" alt="" style="width: 40px;  margin-right: 10px;">
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ./ footer-section -->
+
+        <div id="scrollup">
+            <button id="scroll-top" class="scroll-to-top"><i class="fa-regular fa-arrow-up-long"></i></button>
+        </div>
+        <!--scrollup-->
+
+        <!-- JS here -->
+        <script src="assets/js/vendor/jquary-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/bootstrap-bundle.js"></script>
+        <script src="assets/js/vendor/imagesloaded-pkgd.js"></script>
+        <script src="assets/js/vendor/waypoints.min.js"></script>
+        <script src="assets/js/vendor/venobox.min.js"></script>
+        <script src="assets/js/vendor/odometer.min.js"></script>
+        <script src="assets/js/vendor/meanmenu.js"></script>
+        <script src="assets/js/vendor/smooth-scroll.js"></script>
+        <script src="assets/js/vendor/jquery.isotope.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
+        <script src="assets/js/vendor/swiper.min.js"></script>
+        <script src="assets/js/ajax-form.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
